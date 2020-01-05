@@ -1,5 +1,6 @@
 //rcc - react class component (snipp)
 import React from 'react'
+import Item from './Item'
 
 export default class Todo extends React.Component {
     constructor(props) {
@@ -16,20 +17,22 @@ export default class Todo extends React.Component {
         // prevent default - no page reload
         event.preventDefault()
         // set the new item to add to array
-        const newItem = this.state.newItem;
-        // update the array in the state
-        this.setState(prevState => ({
-            items: prevState.items.concat(newItem),
-            newItem: ''
-        }))
+        const newItem = this.state.newItem.trim();
+        if (newItem !== "")
+            // update the array in the state
+            this.setState(prevState => ({
+                items: prevState.items.concat(newItem),
+                newItem: ''
+            }))
     }
 
     render() {
         return (
             <div>
                 <h3>Todo List</h3>
-                {/* HERE WE'LL ADD THE COMP. TO SHOW THE LIST */}
+
                 <p>A list of thing to do</p>
+                <Item items={this.state.items} />
                 <form onSubmit={this.handleSubmit}>
                     <input
                         onChange={this.handleChange}
