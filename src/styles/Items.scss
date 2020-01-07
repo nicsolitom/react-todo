@@ -1,6 +1,28 @@
-.list-group-item {
-    color: black
-}
-.badge-success {
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script|Raleway:400,500,600&display=swap');
 
+.done-item,
+.todo-item {
+  font-family: 'Raleway', sans-serif;
+  font-size: calc(7px + 2vmin);
+  font-weight: 500;
+}
+
+.done-item {
+  text-decoration: line-through;
+  color: rgb(73, 73, 73);
+}
+
+.list-group-item {
+  color: black;
+  background-color: #ffffff;
+}
+
+.list-group-item:hover {
+  background-color: rgb(236, 255, 233);
+}
+
+.badge-success,
+.badge-danger {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.75rem;
 }

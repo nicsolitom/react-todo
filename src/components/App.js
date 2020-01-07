@@ -1,9 +1,6 @@
 import React from 'react';
-// import logo from './logo.svg';
 import '../styles/App.scss';
 import TodoContainer from './TodoContainer';
-
-
 
 function App() {
   return (
