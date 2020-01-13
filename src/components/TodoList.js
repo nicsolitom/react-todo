@@ -78,7 +78,7 @@ export default class TodoList extends React.Component {
             id="todo-item"
             value={this.state.newItem}
           ></input>
-          <button className="btn btn-danger">Add to list</button>
+          <button className="btn btn-danger mb-4">Add to list</button>
         </form>
       </div>
     );

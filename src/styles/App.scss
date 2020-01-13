@@ -4,7 +4,9 @@
   text-align: center;
   background-image: url('../images/forest-3448818_1920.jpg');
   background-size: cover;
-  background-position: bottom;
+  background-position: bottom right;
+  position: relative;
+  z-index: 10;
 }
 .App:after {
   content: '';
@@ -15,6 +17,7 @@
   height: 100%;
   opacity: 0.7;
   background-color: rgb(0, 0, 0);
+  z-index: -1;
 }
 
 .App-header {
@@ -26,4 +29,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   z-index: 1;
+  // margin-top: 20px;
+  // margin-bottom: 20px;
 }
